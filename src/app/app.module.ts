@@ -14,10 +14,13 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { ProductListComponent } from './product-list/product-list.component';
 import { ProductManagerComponent } from './product-manager/product-manager.component';
 import { ServiceComponent } from './service/service.component';
+import { ProductService } from './product.service';
+import { SlideComponent } from './slide/slide.component';
 
 @NgModule({
   imports:      [ BrowserModule, FormsModule ],
-  declarations: [ AppComponent, HelloComponent, AboutComponent, AddProductComponent, CategoryComponent, HomeComponent, NotFoundComponent, ProductComponent, ProductDetailComponent, ProductListComponent, ProductManagerComponent, ServiceComponent ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ AppComponent, HelloComponent, AboutComponent, AddProductComponent, CategoryComponent, HomeComponent, NotFoundComponent, ProductComponent, ProductDetailComponent, ProductListComponent, ProductManagerComponent, ServiceComponent, SlideComponent ],
+  bootstrap:    [ AppComponent ],
+  providers: [ProductService]
 })
 export class AppModule { }
