@@ -1,0 +1,19 @@
+<table class="table table-bordered">
+	<thead>
+    <button routerLink="/product/add" class="btn btn-primary">Add Product</button>
+		<tr>
+			<th>STT</th>
+			<th>Name</th>
+			<th>Price</th>
+			<th>Action</th>
+		</tr>
+		<tr *ngFor="let product of products;index as i">
+			<th scope="row">{{i}}</th>
+			<td><a routerLink="/product/detail/{{product.id}}">{{product.name}}</a></td>
+			<th>{{product.price}}</th>
+			<th>
+				<button class="btn btn-primary" (click)="RemoveProducts(product.id)">Xóa</button>
+			</th>
+		</tr>
+	</thead>
+</table>
