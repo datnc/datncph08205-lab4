@@ -9,7 +9,7 @@ import { Product } from '../Product';
   styleUrls: ['./product-detail.component.css']
 })
 export class ProductDetailComponent implements OnInit {
-product : Product;
+products : Product;
   constructor(
     private productService : ProductService,
     private activatedRoute : ActivatedRoute
@@ -22,7 +22,7 @@ product : Product;
     this.activatedRoute.params.subscribe(param => {
       console.log(param);
       this.productService.getProduct(param.id).subscribe(data =>{
-        this.product=data;
+        this.products=data;
       })
     }
       );
